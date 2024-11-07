@@ -20,4 +20,5 @@ public class practica {
 
                         System.out.println("ingrese un numero para saber si es par o impar");
                         n1 = scanner.nextInt();
+                        System.out.println("pesuti")
                 }
