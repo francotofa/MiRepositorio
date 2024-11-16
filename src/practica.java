@@ -442,6 +442,8 @@ public class practica {
                         System.out.println("");
                 }
                 */
+
+                /*
                 int matriz[][], nfilas, ncol;
                 boolean simetrica = true;
 
@@ -478,5 +480,217 @@ public class practica {
                 } else {
                         System.out.println("no es simetrica");
                 }
+
+                 */
+// sumar matrices
+/*
+int matriz[][], matriz2[][], nfilas, ncol, nfilas2, ncol2;
+
+        System.out.println("ingrese el numero de filas");
+        nfilas = scanner.nextInt();
+        System.out.println("ingrese el numero de columnas");
+        ncol = scanner.nextInt();
+
+        matriz = new int[nfilas][ncol];
+
+        System.out.println("digite la matriz 1");
+        for (int i = 0; i < nfilas; i++) {
+            for (int j = 0; j < ncol; j++) {
+                System.out.println("matriz [" + i + "] [" + j + "] ");
+                matriz[i][j] = scanner.nextInt();
+            }
+        }
+        System.out.println("ingrese el numero de filas de la 2da matriz");
+        nfilas2 = scanner.nextInt();
+        System.out.println("ingrese el numero de columnas de la 2da matriz");
+        ncol2 = scanner.nextInt();
+        System.out.println("digite la matriz 2");
+        matriz2 = new int[nfilas2][ncol2];
+
+        for (int i = 0; i < nfilas2; i++) {
+            for (int j = 0; j < ncol2; j++) {
+                System.out.println("matriz [" + i + "] [" + j + "] ");
+                matriz2[i][j] = scanner.nextInt();
+            }
+        }
+        System.out.print("la suma de las matrices es: ");
+        for (int i = 0; i < nfilas; i++) {
+            for (int j = 0; j < ncol; j++) {
+                System.out.print(matriz[i][j] + matriz2[i][j]+ "");
+
+            }
+            System.out.println("");
+        }
+ */
+//transponer un matriz
+ /*
+ int matriz[][], nfilas, ncol;
+
+        System.out.println("ingrese el numero de filas");
+        nfilas = scanner.nextInt();
+        System.out.println("ingrese el numero de columnas");
+        ncol = scanner.nextInt();
+
+        matriz = new int[nfilas][ncol];
+
+        System.out.println("digite la matriz 1");
+        for (int i = 0; i < nfilas; i++) {
+            for (int j = 0; j < ncol; j++) {
+                System.out.println("matriz [" + i + "] [" + j + "] ");
+                matriz[i][j] = scanner.nextInt();
+            }
+        }
+
+
+System.out.println("la matriz original es: ");
+        for (int i = 0; i < nfilas; i++) {
+            for (int j = 0; j < ncol; j++) {
+                System.out.print(matriz[i][j]);
+
+            }
+            System.out.println("");
+        }
+        int aux=0;
+        for (int i=0; i<nfilas;i++){
+            for (int j=0; j<i;j++){
+                aux = matriz[i][j];
+                matriz [i][j] = matriz [j][i];
+                matriz[j][i]=aux;
+
+            }
+        }
+        System.out.println("la matriz transpuesta es: ");
+        for (int i=0; i<nfilas;i++){
+            for (int j=0; j<ncol;j++){
+                System.out.print(matriz[i] [j]);
+            }
+            System.out.println(" ");
+        }
+    }
+}
+  */
+//los elementos de la diagonal principal son 1 y los demas 0
+ /*
+
+        for (int i = 0; i < 7; i++) {
+            matriz[i][i] = 1;
+        }
+
+            for (int i = 0; i < 7; i++) {
+                for (int j = 0; j < 7; j++) {
+                    System.out.print(matriz[i][j]);
+                }
+                System.out.println(" ");
+            }
+  */
+//mostrar la suma de cada fila y cada columna
+ /*
+  int matriz[][], nfilas, ncol, aux ,aux2 ;
+
+        System.out.println("ingrese el numero de filas");
+        nfilas = scanner.nextInt();
+        System.out.println("ingrese el numero de columnas");
+        ncol = scanner.nextInt();
+
+        matriz = new int[nfilas][ncol];
+
+        System.out.println("digite la matriz 1");
+        for (int i = 0; i < nfilas; i++) {
+            for (int j = 0; j < ncol; j++) {
+                System.out.println("matriz [" + i + "] [" + j + "] ");
+                matriz[i][j] = scanner.nextInt();
+            }
+        }
+        for (int i = 0; i < nfilas; i++) {
+            aux=0;
+            for (int j = 0; j < ncol; j++) {
+                aux += matriz[i][j];
+            }
+            System.out.println("la suma de las fila " + i + " es " + aux);
+        }
+        System.out.println(" ");
+        for (int j = 0; j < nfilas; j++) {
+            aux2=0;
+            for (int i = 0; i < ncol; i++) {
+            aux2 +=matriz[i][j];
+            }
+            System.out.println("la suma de la columna "+j+" es: "+aux2);
+        }
+        System.out.println(" ");
+  */
+//utilizando dos matrices 5x9 y 9x5, cargar la primera y transponerla a la segunda
+                /*
+                int matriz[][] = new int[5][9],aux,matriz2[][] = new int[9][5];;
+
+
+        System.out.println("digite la matriz 5x9");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.println("matriz [" + i + "] [" + j + "] ");
+                matriz[i][j] = scanner.nextInt();
+
+            }
+        }
+        System.out.println("la matriz original es: ");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.print(matriz[i][j]);
+
+            }
+            System.out.println(" ");
+        }
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 5; j++) {
+                matriz2[i][j] = matriz[j][i];
+            }
+        }
+        System.out.println("la matriz transpuesta es: ");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.print(matriz[i][j]);
+
+            }
+            System.out.println(" ");
+        }
+                 */
+ // hacer un cruadrado con 1
+                /*
+                int matriz[][] = new int[5][5];
+
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (i == 0 || i == 4) {
+                    matriz [i][j] = 1;
+                }
+                else if (j == 0 || j == 4) {
+                    matriz [i][j] = 1;
+                }
+                else {
+                    matriz[i][j] =0;
+                }
+            }
+        }
+                System.out.println("\nMatriz\n");
+                for (int i = 0; i < 5; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        System.out.print(matriz[i][j] + "  ");
+                    }
+                    System.out.println(" ");
+                }
+                 */
+//POO
+//ATRIBUTOS (CARACTERISTICAS): color, marca, km  /ejemplo auto
+//METODOS (ACCIONES):encender, acerlerar, frenar   /ejemplo auto
+//CLASES: es un conjunto de objetos con caracteristicas similares
+/*
+Coche
+-color
+-marca
+-km
+encender()
+acelerar()
+frenar()
+ */
         }
 }
